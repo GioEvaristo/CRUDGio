@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    Nome: {{dados.nome}}
+    Descrição: {{dados.descricao}}
+    <table>
+        <tr>
+            <th>
+                Disciplina
+            </th>
+        </tr>
+    {% for disciplina in dados.getlist('disciplina') %}
+        <tr>
+            <td>
+                {{disciplina}}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

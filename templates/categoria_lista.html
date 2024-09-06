@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages()%}
+    {% if mensagens%}
+        {% for msg in mensagens%}
+        <div class="message">
+            {{msg}}
+        </div>
+        {% endfor %}
+    {% endif %}
+    <a href="/categoria/add">+ Adicionar</a>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Código</th>
+            <th>Edita</th>
+            <th>Remove</th>
+        </tr>
+        {% for categoria in dados %}
+        <tr>
+            <td>{{categoria.nome}}</td>
+            <td>{{categoria.descricao}}</td>
+            <td>{{categoria.codigo}}</td>
+            <td><a href="/categoria/edita/{{categoria.id_categoria}}">Editar</a></td>
+            <td><a href="/categoria/remove/{{categoria.id_categoria}}">Remover</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

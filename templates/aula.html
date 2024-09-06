@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <a href="/">Voltar</a>
+    <h1>Estou na aula de Web:</h1>
+    <h2>
+        <p>Nome: {{dados_curso.nome}}</p>
+        <p>Curso: {{dados_curso.curso}}</p>
+        <p>Ano: {{dados_curso.ano}}</p>
+    </h2>
+    <img src="{{url_for('static', filename='img/garfield.gif')}}" alt="Garfield">
+{% endblock %}

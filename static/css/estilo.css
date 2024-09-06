@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Handjet:wght@100..900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Comic Neue';
+}
+
+:root{
+    --primary: #FF7BC4;
+    --secondary: #a80960;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    background-image: radial-gradient(pink, black);
+
+}
+
+header a{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    margin: 0.5rem;
+}
+
+main {
+    min-height: calc(100vh - 7rem);
+    background-color: rgb(252, 199, 252);
+    background-image: url(/static/img/stars.gif);
+}
+
+a, input{
+    display: block;
+}
+
+img{
+    width: 30rem;
+}
+
+table, tr, td, th{
+    border: 2px solid pink;
+    border-collapse: collapse;
+}
+
+footer{
+    font-size: x-small;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    background-image: radial-gradient(pink, black);
+    justify-content: end;
+    color: white;
+}

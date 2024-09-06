@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria de Produtos</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+</head>
+<body>
+    <header>
+    <nav>
+        <div>
+            <a href="/">HOME</a>
+            <a href="/form">FORMULÁRIO</a>
+            <a href="/categoria">CATEGORIA</a>
+        </div>
+    </nav>
+    </header>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <h3>© 2024 TODOS OS DIREITOS RESERVADOS </h3>
+    </footer>
+</body>
+</html>
