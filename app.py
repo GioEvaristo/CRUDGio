@@ -86,7 +86,7 @@ def categoria_editasave():
     codigo = request.form.get('codigo')
     id_categoria = request.form.get('id_categoria')
     if nome and descricao and codigo:
-        categoria = Usuario.query.get(id_categoria)
+        categoria = Categorias.query.get(id_categoria)
         categoria.nome = nome
         categoria.descricao = descricao
         categoria.codigo = codigo

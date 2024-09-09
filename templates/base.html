@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
 </head>
 <body>
+    <div class="hed">
     <header>
+        <div>
+        <h1>CRUD FLASK GIO</h1>
+        </div>
+    </header>
+    </div>
     <nav>
         <div>
             <a href="/">HOME</a>
@@ -15,14 +21,15 @@
             <a href="/categoria">CATEGORIA</a>
         </div>
     </nav>
-    </header>
     <main>
         {% block conteudo %}
         {% endblock %}
     </main>
 
+    <div class="fut">
     <footer>
-        <h3>© 2024 TODOS OS DIREITOS RESERVADOS </h3>
+        <h3>© 2024 TODOS OS DIREITOS RESERVADOS </h3>    
     </footer>
+    </div>
 </body>
 </html>

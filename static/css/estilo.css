@@ -14,18 +14,36 @@
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 4rem;
-    background-image: radial-gradient(pink, black);
-
+    height: 5rem;
+    background-color: var(--secondary);
+    background-image: url(/static/img/estrelas.gif);
 }
 
-header a{
+header h1{
     text-decoration: none;
-    font-size: large;
+    font-size: x-large;
     color: white;
+    font-weight: bold;
     margin: 0.5rem;
+}
+
+nav div {
+    display: flex;
+    height: 2rem;
+    background-color: var(--primary);
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav div a{
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+
+    align-items: center;
+    margin: 2rem;
 }
 
 main {
@@ -52,7 +70,12 @@ footer{
     height: 3rem;
     display: flex;
     align-items: center;
-    background-image: radial-gradient(pink, black);
+    background-color: var(--secondary);
+    background-image: url(/static/img/estrelas.gif);
     justify-content: end;
     color: white;
+}
+
+.fut{
+    background-image: linear-gradient(red, yellow);
 }
