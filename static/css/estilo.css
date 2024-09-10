@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Handjet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
-    font-family: 'Comic Neue';
+    font-family: 'Rum Raisin';
 }
 
 :root{
     --primary: #FF7BC4;
-    --secondary: #a80960;
+    --secondary: #db4598;
     --gray: rgb(217, 208, 208);
     --white: white;
     --purple: rgb(115, 36, 155);
@@ -24,16 +24,15 @@ header{
 }
 
 header h1{
-    text-decoration: none;
     font-size: 3rem;
     color: var(--purple);
-    font-weight: bold;
     margin: 0.5rem;
 }
 
+
 nav div {
     display: flex;
-    height: 2rem;
+    height: 3rem;
     background-image: radial-gradient(#FF7BC4, rgba(0, 0, 0, 0.17) );
     justify-content: space-around;
     align-items: center;
@@ -41,42 +40,106 @@ nav div {
 
 nav div a{
     display: flex;
-    font-weight: bold;
+    font-size: xx-large;
     text-decoration: none;
-
     align-items: center;
     margin: 2rem;
 }
 
 main {
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 11rem);
     background-color: rgb(252, 199, 252);
     background-image: url(/static/img/stars.gif);
 }
 
 a, input{
-    display: block;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    text-decoration: none;
 }
 
 img{
-    width: 30rem;
+    width: 15rem;
 }
 
 table, tr, td, th{
     border: 3px solid var(--purple);
     border-collapse: collapse;
-    background-image: radial-gradient(#FF7BC4, rgba(0, 0, 0, 0.17) );
+    background-image: radial-gradient(#ff8ecc, rgba(0, 0, 0, 0.164) );
     font-size: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+fieldset{
+    border: 3px solid var(--purple);
+    border-collapse: collapse;
+    background-image: radial-gradient(#ff8ecc, rgba(0, 0, 0, 0.164) );
+    font-size: 3rem;
+    text-decoration: none;
+    padding: 1rem;
+    width: 30rem;
+    height: 27rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset button{
+    margin-top: 1rem;
+    margin-left: 20rem;
+    height: 5rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+    color: azure;
+    cursor: pointer;
+    border: 2px solid var(--gray);
+    border-radius: 10rem;
+    font-size: 2rem;
+}
+
+fieldset input{
+    font-size: 2rem;
+    height: 3rem;
+    width: 28rem;
+    background-color: var(--primary);
+    border: 3px solid var(--purple);
+}
+
+
+.add{
+    padding-top: 5rem;
+    margin-bottom: 2rem;
+    text-decoration: overline;
+    color: var(--purple)
+}
+
+div.index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    color: var(--secondary);
+    padding-top: 12rem;
+
 }
 
 footer{
-    font-size: x-small;
+    font-size: smaller;
+    padding-right: 1rem;
     height: 3rem;
     display: flex;
     align-items: center;
     background-image: radial-gradient(#FF7BC4, rgba(0, 0, 0, 0.17) );
     justify-content: end;
-    color: black;
+    color: var(--purple);
 }

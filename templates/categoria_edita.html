@@ -10,6 +10,7 @@
         {% endfor %}
     {% endif %}
     <form action="/categoria/editasave" method="post">
+        <fieldset>
         <input type="hidden" name="id_categoria", value="{{dados.id_categoria}}">
 
         <label for="nome">Nome: </label>
@@ -22,5 +23,6 @@
         <input type="text" name="codigo" id="codigo", value="{{dados.codigo}}">
 
         <button type="submit">Salvar</button>
+        </fieldset>
     </form>
 {% endblock %}

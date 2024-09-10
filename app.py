@@ -19,24 +19,6 @@ migrate = Migrate(app, db)
 def index():
     return render_template('index.html')
 
-@app.route('/aula')
-@app.route('/aula/<nome>and id_categoria')
-@app.route('/aula/<nome>/<curso>')
-@app.route('/aula/<nome>/<curso>/<int:ano>')
-def aula(nome = 'Gabriel', curso = 'Informática', ano = '1'):
-    dados = {'nome':nome, 'curso':curso, 'ano':ano}
-    return render_template('aula.html', dados_curso=dados)
-
-@app.route('/form')
-def form():
-    return render_template('form.html')
-
-@app.route('/dados', methods=['POST'])
-def dados():
-    flash('Dados Enviados!!!')
-    dados = request.form
-    return render_template('dados.html', dados = dados)
-
 @app.route("/categoria")
 def categoria():
     c = Categorias.query.all()

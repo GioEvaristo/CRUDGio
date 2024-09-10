@@ -10,6 +10,7 @@
         {% endfor %}
     {% endif %}
     <form action="/categoria/save" method="post">
+        <fieldset>
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome">
 
@@ -20,5 +21,6 @@
         <input type="text" name="codigo" id="codigo">
 
         <button type="submit">Salvar</button>
+        </fieldset>
     </form>
 {% endblock %}

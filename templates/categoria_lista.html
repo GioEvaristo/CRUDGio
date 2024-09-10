@@ -9,8 +9,10 @@
         </div>
         {% endfor %}
     {% endif %}
+    <div class="add">
     <a href="/categoria/add">+ Adicionar</a>
-    <table class="editaremove">
+    </div>
+    <table>
         <tr>
             <th>Nome</th>
             <th>Descrição</th>
@@ -19,7 +21,7 @@
             <th>Remove</th>
         </tr>
         {% for categoria in dados %}
-        <tr>
+        <tr class="editaremove">
             <td>{{categoria.nome}}</td>
             <td>{{categoria.descricao}}</td>
             <td>{{categoria.codigo}}</td>
@@ -28,4 +30,5 @@
         </tr>
         {% endfor %}
     </table>
+    
 {% endblock %}
