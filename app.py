@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, flash, redirect
-
 from database import db
 from flask_migrate import Migrate
 from models import Categorias
@@ -21,7 +20,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/aula')
-@app.route('/aula/<nome>')
+@app.route('/aula/<nome>and id_categoria')
 @app.route('/aula/<nome>/<curso>')
 @app.route('/aula/<nome>/<curso>/<int:ano>')
 def aula(nome = 'Gabriel', curso = 'Informática', ano = '1'):
@@ -39,7 +38,7 @@ def dados():
     return render_template('dados.html', dados = dados)
 
 @app.route("/categoria")
-def categorias():
+def categoria():
     c = Categorias.query.all()
     return render_template("categoria_lista.html", dados = c)
 
@@ -56,15 +55,15 @@ def categoria_save():
         categoria = Categorias(nome, descricao, codigo)
         db.session.add(categoria)
         db.session.commit()
-        flash('Categoria de Produto cadastrada com sucesso!! :D')
+        flash('Categoria de Produto cadastrada com sucesso! XD')
         return redirect('/categoria')
     else:
-        flash('Preencha todos os campos! >:(')
+        flash('Preencha todos os campos! >=P')
         return redirect('/categoria/add')
 
-@app.route("/categoria/remove/<int:id>")
-def categoria_remove(id):
-    categoria = Categorias.query.get(id)
+@app.route("/categoria/remove/<int:id_categoria>")
+def categoria_remove(id_categoria):
+    categoria = Categorias.query.get(id_categoria)
     if categoria:
         db.session.delete(categoria)
         db.session.commit()
@@ -74,9 +73,10 @@ def categoria_remove(id):
         flash("Caminho incorreto!")
         return redirect("/categoria")
 
-@app.route("/categoria/edita/<int:id>")
-def categoria_edita(id):
-    categoria = Categorias.query.get(id)
+
+@app.route("/categoria/edita/<int:id_categoria>")
+def categoria_edita(id_categoria):
+    categoria = Categorias.query.get(id_categoria)
     return render_template("categoria_edita.html", dados=categoria)
 
 @app.route("/categoria/editasave", methods=['POST'])
@@ -85,7 +85,7 @@ def categoria_editasave():
     descricao = request.form.get('descricao')
     codigo = request.form.get('codigo')
     id_categoria = request.form.get('id_categoria')
-    if nome and descricao and codigo:
+    if id_categoria and nome and descricao and codigo:
         categoria = Categorias.query.get(id_categoria)
         categoria.nome = nome
         categoria.descricao = descricao
