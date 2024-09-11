@@ -13,7 +13,7 @@
     <a href="/categoria/add">+ Adicionar</a>
     </div>
     <table>
-        <tr>
+        <tr class="titulos">
             <th>Nome</th>
             <th>Descrição</th>
             <th>Código</th>
@@ -21,7 +21,7 @@
             <th>Remove</th>
         </tr>
         {% for categoria in dados %}
-        <tr class="editaremove">
+        <tr>
             <td>{{categoria.nome}}</td>
             <td>{{categoria.descricao}}</td>
             <td>{{categoria.codigo}}</td>
